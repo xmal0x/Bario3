@@ -10,3 +10,11 @@ D:\Projects\bario3\bario3\bario3\obj\Debug\bario3.pdb
 D:\Projects\Bario3new\bario3\bario3\bin\Debug\bario3.exe.config
 D:\Projects\Bario3new\bario3\bario3\obj\Debug\bario3.exe
 D:\Projects\Bario3new\bario3\bario3\obj\Debug\bario3.pdb
+D:\projects\Bario3new\bario3\bario3\bin\Debug\bario3.exe
+D:\projects\Bario3new\bario3\bario3\bin\Debug\bario3.pdb
+D:\projects\Bario3new\bario3\bario3\bin\Debug\Newtonsoft.Json.dll
+D:\projects\Bario3new\bario3\bario3\bin\Debug\Newtonsoft.Json.xml
+D:\projects\Bario3new\bario3\bario3\obj\Debug\bario3.csprojResolveAssemblyReference.cache
+D:\projects\Bario3new\bario3\bario3\obj\Debug\bario3.FormMain.resources
+D:\projects\Bario3new\bario3\bario3\obj\Debug\bario3.Properties.Resources.resources
+D:\projects\Bario3new\bario3\bario3\obj\Debug\bario3.csproj.GenerateResource.Cache

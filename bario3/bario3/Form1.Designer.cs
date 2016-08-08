@@ -30,52 +30,52 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panelMain = new System.Windows.Forms.Panel();
-            this.buttonConnect = new System.Windows.Forms.Button();
             this.buttonSave = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.buttonConnect = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panelScanPosition = new System.Windows.Forms.Panel();
-            this.labelScanposition = new System.Windows.Forms.Label();
-            this.labelSerialScan = new System.Windows.Forms.Label();
-            this.labelWeightScan = new System.Windows.Forms.Label();
-            this.textBoxSerialScan = new System.Windows.Forms.TextBox();
-            this.textBoxWeightScan = new System.Windows.Forms.TextBox();
             this.buttonScanPosition = new System.Windows.Forms.Button();
-            this.dataGridViewStorage = new System.Windows.Forms.DataGridView();
+            this.textBoxWeightScan = new System.Windows.Forms.TextBox();
+            this.textBoxSerialScan = new System.Windows.Forms.TextBox();
+            this.labelWeightScan = new System.Windows.Forms.Label();
+            this.labelSerialScan = new System.Windows.Forms.Label();
+            this.labelScanposition = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panelAddPosition = new System.Windows.Forms.Panel();
-            this.labelAddPosition = new System.Windows.Forms.Label();
-            this.labelAddName = new System.Windows.Forms.Label();
-            this.labelAddSerial = new System.Windows.Forms.Label();
-            this.labelAddType = new System.Windows.Forms.Label();
-            this.labelAddWeightFull = new System.Windows.Forms.Label();
-            this.labelAddWeightEmpty = new System.Windows.Forms.Label();
-            this.labelAddWeightNow = new System.Windows.Forms.Label();
-            this.labelAddCapacityFull = new System.Windows.Forms.Label();
-            this.labelAddCapacityNow = new System.Windows.Forms.Label();
-            this.labelAddPrice = new System.Windows.Forms.Label();
-            this.labelAddSize = new System.Windows.Forms.Label();
-            this.textBoxAddName = new System.Windows.Forms.TextBox();
-            this.textBoxAddSerial = new System.Windows.Forms.TextBox();
-            this.textBoxAddType = new System.Windows.Forms.TextBox();
-            this.textBoxAddWeightFull = new System.Windows.Forms.TextBox();
-            this.textBoxAddWeightEmpty = new System.Windows.Forms.TextBox();
-            this.textBoxAddWeightNow = new System.Windows.Forms.TextBox();
-            this.textBoxAddCapacityFull = new System.Windows.Forms.TextBox();
-            this.textBoxAddCapacityNow = new System.Windows.Forms.TextBox();
-            this.textBoxAddPrice = new System.Windows.Forms.TextBox();
-            this.textBoxAddSize = new System.Windows.Forms.TextBox();
             this.buttonAddPosition = new System.Windows.Forms.Button();
+            this.textBoxAddPortion = new System.Windows.Forms.TextBox();
+            this.textBoxAddPrice = new System.Windows.Forms.TextBox();
+            this.textBoxAddCapacityNow = new System.Windows.Forms.TextBox();
+            this.textBoxAddCapacityFull = new System.Windows.Forms.TextBox();
+            this.textBoxAddWeightNow = new System.Windows.Forms.TextBox();
+            this.textBoxAddWeightEmpty = new System.Windows.Forms.TextBox();
+            this.textBoxAddWeightFull = new System.Windows.Forms.TextBox();
+            this.textBoxAddType = new System.Windows.Forms.TextBox();
+            this.textBoxAddSerial = new System.Windows.Forms.TextBox();
+            this.textBoxAddName = new System.Windows.Forms.TextBox();
+            this.labelAddPortion = new System.Windows.Forms.Label();
+            this.labelAddPrice = new System.Windows.Forms.Label();
+            this.labelAddCapacityNow = new System.Windows.Forms.Label();
+            this.labelAddCapacityFull = new System.Windows.Forms.Label();
+            this.labelAddWeightNow = new System.Windows.Forms.Label();
+            this.labelAddWeightEmpty = new System.Windows.Forms.Label();
+            this.labelAddWeightFull = new System.Windows.Forms.Label();
+            this.labelAddType = new System.Windows.Forms.Label();
+            this.labelAddSerial = new System.Windows.Forms.Label();
+            this.labelAddName = new System.Windows.Forms.Label();
+            this.labelAddPosition = new System.Windows.Forms.Label();
+            this.dataGridViewClassification = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
             this.panelMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabPage2.SuspendLayout();
             this.panelScanPosition.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStorage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabPage3.SuspendLayout();
             this.panelAddPosition.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClassification)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -100,6 +100,35 @@
             this.tabPage1.Text = "Главная";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // panelMain
+            // 
+            this.panelMain.Controls.Add(this.buttonSave);
+            this.panelMain.Controls.Add(this.buttonConnect);
+            this.panelMain.Location = new System.Drawing.Point(924, 6);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(224, 130);
+            this.panelMain.TabIndex = 0;
+            // 
+            // buttonSave
+            // 
+            this.buttonSave.Location = new System.Drawing.Point(113, 32);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(108, 23);
+            this.buttonSave.TabIndex = 1;
+            this.buttonSave.Text = "Сохранить";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            // 
+            // buttonConnect
+            // 
+            this.buttonConnect.Location = new System.Drawing.Point(113, 3);
+            this.buttonConnect.Name = "buttonConnect";
+            this.buttonConnect.Size = new System.Drawing.Size(108, 23);
+            this.buttonConnect.TabIndex = 0;
+            this.buttonConnect.Text = "Подключиться";
+            this.buttonConnect.UseVisualStyleBackColor = true;
+            this.buttonConnect.Click += new System.EventHandler(this.buttonConnect_Click);
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.panelScanPosition);
@@ -111,52 +140,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Инвентаризация";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.panelAddPosition);
-            this.tabPage3.Controls.Add(this.dataGridViewStorage);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1154, 641);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "БД наименований";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // panelMain
-            // 
-            this.panelMain.Controls.Add(this.buttonSave);
-            this.panelMain.Controls.Add(this.buttonConnect);
-            this.panelMain.Location = new System.Drawing.Point(924, 6);
-            this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(224, 130);
-            this.panelMain.TabIndex = 0;
-            // 
-            // buttonConnect
-            // 
-            this.buttonConnect.Location = new System.Drawing.Point(113, 3);
-            this.buttonConnect.Name = "buttonConnect";
-            this.buttonConnect.Size = new System.Drawing.Size(108, 23);
-            this.buttonConnect.TabIndex = 0;
-            this.buttonConnect.Text = "Подключиться";
-            this.buttonConnect.UseVisualStyleBackColor = true;
-            // 
-            // buttonSave
-            // 
-            this.buttonSave.Location = new System.Drawing.Point(113, 32);
-            this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(108, 23);
-            this.buttonSave.TabIndex = 1;
-            this.buttonSave.Text = "Сохранить";
-            this.buttonSave.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 7);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(830, 628);
-            this.dataGridView1.TabIndex = 0;
             // 
             // panelScanPosition
             // 
@@ -171,23 +154,28 @@
             this.panelScanPosition.Size = new System.Drawing.Size(304, 117);
             this.panelScanPosition.TabIndex = 1;
             // 
-            // labelScanposition
+            // buttonScanPosition
             // 
-            this.labelScanposition.AutoSize = true;
-            this.labelScanposition.Location = new System.Drawing.Point(16, 14);
-            this.labelScanposition.Name = "labelScanposition";
-            this.labelScanposition.Size = new System.Drawing.Size(123, 13);
-            this.labelScanposition.TabIndex = 0;
-            this.labelScanposition.Text = "Сканировать позицию:";
+            this.buttonScanPosition.Location = new System.Drawing.Point(96, 83);
+            this.buttonScanPosition.Name = "buttonScanPosition";
+            this.buttonScanPosition.Size = new System.Drawing.Size(100, 23);
+            this.buttonScanPosition.TabIndex = 5;
+            this.buttonScanPosition.Text = "Сканировать";
+            this.buttonScanPosition.UseVisualStyleBackColor = true;
             // 
-            // labelSerialScan
+            // textBoxWeightScan
             // 
-            this.labelSerialScan.AutoSize = true;
-            this.labelSerialScan.Location = new System.Drawing.Point(31, 37);
-            this.labelSerialScan.Name = "labelSerialScan";
-            this.labelSerialScan.Size = new System.Drawing.Size(59, 13);
-            this.labelSerialScan.TabIndex = 1;
-            this.labelSerialScan.Text = "Серийник:";
+            this.textBoxWeightScan.Location = new System.Drawing.Point(96, 57);
+            this.textBoxWeightScan.Name = "textBoxWeightScan";
+            this.textBoxWeightScan.Size = new System.Drawing.Size(100, 20);
+            this.textBoxWeightScan.TabIndex = 4;
+            // 
+            // textBoxSerialScan
+            // 
+            this.textBoxSerialScan.Location = new System.Drawing.Point(96, 34);
+            this.textBoxSerialScan.Name = "textBoxSerialScan";
+            this.textBoxSerialScan.Size = new System.Drawing.Size(100, 20);
+            this.textBoxSerialScan.TabIndex = 3;
             // 
             // labelWeightScan
             // 
@@ -198,41 +186,47 @@
             this.labelWeightScan.TabIndex = 2;
             this.labelWeightScan.Text = "Вес позиции:";
             // 
-            // textBoxSerialScan
+            // labelSerialScan
             // 
-            this.textBoxSerialScan.Location = new System.Drawing.Point(96, 34);
-            this.textBoxSerialScan.Name = "textBoxSerialScan";
-            this.textBoxSerialScan.Size = new System.Drawing.Size(100, 20);
-            this.textBoxSerialScan.TabIndex = 3;
+            this.labelSerialScan.AutoSize = true;
+            this.labelSerialScan.Location = new System.Drawing.Point(31, 37);
+            this.labelSerialScan.Name = "labelSerialScan";
+            this.labelSerialScan.Size = new System.Drawing.Size(59, 13);
+            this.labelSerialScan.TabIndex = 1;
+            this.labelSerialScan.Text = "Серийник:";
             // 
-            // textBoxWeightScan
+            // labelScanposition
             // 
-            this.textBoxWeightScan.Location = new System.Drawing.Point(96, 57);
-            this.textBoxWeightScan.Name = "textBoxWeightScan";
-            this.textBoxWeightScan.Size = new System.Drawing.Size(100, 20);
-            this.textBoxWeightScan.TabIndex = 4;
+            this.labelScanposition.AutoSize = true;
+            this.labelScanposition.Location = new System.Drawing.Point(16, 14);
+            this.labelScanposition.Name = "labelScanposition";
+            this.labelScanposition.Size = new System.Drawing.Size(123, 13);
+            this.labelScanposition.TabIndex = 0;
+            this.labelScanposition.Text = "Сканировать позицию:";
             // 
-            // buttonScanPosition
+            // dataGridView1
             // 
-            this.buttonScanPosition.Location = new System.Drawing.Point(96, 83);
-            this.buttonScanPosition.Name = "buttonScanPosition";
-            this.buttonScanPosition.Size = new System.Drawing.Size(100, 23);
-            this.buttonScanPosition.TabIndex = 5;
-            this.buttonScanPosition.Text = "Сканировать";
-            this.buttonScanPosition.UseVisualStyleBackColor = true;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(7, 7);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(830, 628);
+            this.dataGridView1.TabIndex = 0;
             // 
-            // dataGridViewStorage
+            // tabPage3
             // 
-            this.dataGridViewStorage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewStorage.Location = new System.Drawing.Point(4, 4);
-            this.dataGridViewStorage.Name = "dataGridViewStorage";
-            this.dataGridViewStorage.Size = new System.Drawing.Size(810, 634);
-            this.dataGridViewStorage.TabIndex = 0;
+            this.tabPage3.Controls.Add(this.panelAddPosition);
+            this.tabPage3.Controls.Add(this.dataGridViewClassification);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(1154, 641);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "БД наименований";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // panelAddPosition
             // 
             this.panelAddPosition.Controls.Add(this.buttonAddPosition);
-            this.panelAddPosition.Controls.Add(this.textBoxAddSize);
+            this.panelAddPosition.Controls.Add(this.textBoxAddPortion);
             this.panelAddPosition.Controls.Add(this.textBoxAddPrice);
             this.panelAddPosition.Controls.Add(this.textBoxAddCapacityNow);
             this.panelAddPosition.Controls.Add(this.textBoxAddCapacityFull);
@@ -242,7 +236,7 @@
             this.panelAddPosition.Controls.Add(this.textBoxAddType);
             this.panelAddPosition.Controls.Add(this.textBoxAddSerial);
             this.panelAddPosition.Controls.Add(this.textBoxAddName);
-            this.panelAddPosition.Controls.Add(this.labelAddSize);
+            this.panelAddPosition.Controls.Add(this.labelAddPortion);
             this.panelAddPosition.Controls.Add(this.labelAddPrice);
             this.panelAddPosition.Controls.Add(this.labelAddCapacityNow);
             this.panelAddPosition.Controls.Add(this.labelAddCapacityFull);
@@ -258,86 +252,94 @@
             this.panelAddPosition.Size = new System.Drawing.Size(330, 339);
             this.panelAddPosition.TabIndex = 1;
             // 
-            // labelAddPosition
+            // buttonAddPosition
             // 
-            this.labelAddPosition.AutoSize = true;
-            this.labelAddPosition.Location = new System.Drawing.Point(4, 4);
-            this.labelAddPosition.Name = "labelAddPosition";
-            this.labelAddPosition.Size = new System.Drawing.Size(155, 13);
-            this.labelAddPosition.TabIndex = 0;
-            this.labelAddPosition.Text = "Добавить позицию на склад:";
+            this.buttonAddPosition.Location = new System.Drawing.Point(149, 287);
+            this.buttonAddPosition.Name = "buttonAddPosition";
+            this.buttonAddPosition.Size = new System.Drawing.Size(100, 38);
+            this.buttonAddPosition.TabIndex = 21;
+            this.buttonAddPosition.Text = "Добавить позицию";
+            this.buttonAddPosition.UseVisualStyleBackColor = true;
+            this.buttonAddPosition.Click += new System.EventHandler(this.buttonAddPosition_Click);
             // 
-            // labelAddName
+            // textBoxAddPortion
             // 
-            this.labelAddName.AutoSize = true;
-            this.labelAddName.Location = new System.Drawing.Point(4, 31);
-            this.labelAddName.Name = "labelAddName";
-            this.labelAddName.Size = new System.Drawing.Size(60, 13);
-            this.labelAddName.TabIndex = 1;
-            this.labelAddName.Text = "Название:";
+            this.textBoxAddPortion.Location = new System.Drawing.Point(149, 260);
+            this.textBoxAddPortion.Name = "textBoxAddPortion";
+            this.textBoxAddPortion.Size = new System.Drawing.Size(100, 20);
+            this.textBoxAddPortion.TabIndex = 20;
             // 
-            // labelAddSerial
+            // textBoxAddPrice
             // 
-            this.labelAddSerial.AutoSize = true;
-            this.labelAddSerial.Location = new System.Drawing.Point(4, 56);
-            this.labelAddSerial.Name = "labelAddSerial";
-            this.labelAddSerial.Size = new System.Drawing.Size(59, 13);
-            this.labelAddSerial.TabIndex = 2;
-            this.labelAddSerial.Text = "Серийник:";
+            this.textBoxAddPrice.Location = new System.Drawing.Point(149, 233);
+            this.textBoxAddPrice.Name = "textBoxAddPrice";
+            this.textBoxAddPrice.Size = new System.Drawing.Size(100, 20);
+            this.textBoxAddPrice.TabIndex = 19;
             // 
-            // labelAddType
+            // textBoxAddCapacityNow
             // 
-            this.labelAddType.AutoSize = true;
-            this.labelAddType.Location = new System.Drawing.Point(4, 81);
-            this.labelAddType.Name = "labelAddType";
-            this.labelAddType.Size = new System.Drawing.Size(29, 13);
-            this.labelAddType.TabIndex = 3;
-            this.labelAddType.Text = "Тип:";
+            this.textBoxAddCapacityNow.Location = new System.Drawing.Point(149, 205);
+            this.textBoxAddCapacityNow.Name = "textBoxAddCapacityNow";
+            this.textBoxAddCapacityNow.Size = new System.Drawing.Size(100, 20);
+            this.textBoxAddCapacityNow.TabIndex = 18;
             // 
-            // labelAddWeightFull
+            // textBoxAddCapacityFull
             // 
-            this.labelAddWeightFull.AutoSize = true;
-            this.labelAddWeightFull.Location = new System.Drawing.Point(4, 108);
-            this.labelAddWeightFull.Name = "labelAddWeightFull";
-            this.labelAddWeightFull.Size = new System.Drawing.Size(132, 13);
-            this.labelAddWeightFull.TabIndex = 4;
-            this.labelAddWeightFull.Text = "Вес полной бутылки, мг:";
+            this.textBoxAddCapacityFull.Location = new System.Drawing.Point(149, 178);
+            this.textBoxAddCapacityFull.Name = "textBoxAddCapacityFull";
+            this.textBoxAddCapacityFull.Size = new System.Drawing.Size(100, 20);
+            this.textBoxAddCapacityFull.TabIndex = 17;
             // 
-            // labelAddWeightEmpty
+            // textBoxAddWeightNow
             // 
-            this.labelAddWeightEmpty.AutoSize = true;
-            this.labelAddWeightEmpty.Location = new System.Drawing.Point(4, 133);
-            this.labelAddWeightEmpty.Name = "labelAddWeightEmpty";
-            this.labelAddWeightEmpty.Size = new System.Drawing.Size(130, 13);
-            this.labelAddWeightEmpty.TabIndex = 5;
-            this.labelAddWeightEmpty.Text = "Вес пустой бутылки, мг:";
+            this.textBoxAddWeightNow.Location = new System.Drawing.Point(149, 153);
+            this.textBoxAddWeightNow.Name = "textBoxAddWeightNow";
+            this.textBoxAddWeightNow.Size = new System.Drawing.Size(100, 20);
+            this.textBoxAddWeightNow.TabIndex = 16;
             // 
-            // labelAddWeightNow
+            // textBoxAddWeightEmpty
             // 
-            this.labelAddWeightNow.AutoSize = true;
-            this.labelAddWeightNow.Location = new System.Drawing.Point(3, 156);
-            this.labelAddWeightNow.Name = "labelAddWeightNow";
-            this.labelAddWeightNow.Size = new System.Drawing.Size(95, 13);
-            this.labelAddWeightNow.TabIndex = 6;
-            this.labelAddWeightNow.Text = "Текущий вес, мг:";
+            this.textBoxAddWeightEmpty.Location = new System.Drawing.Point(149, 130);
+            this.textBoxAddWeightEmpty.Name = "textBoxAddWeightEmpty";
+            this.textBoxAddWeightEmpty.Size = new System.Drawing.Size(100, 20);
+            this.textBoxAddWeightEmpty.TabIndex = 15;
             // 
-            // labelAddCapacityFull
+            // textBoxAddWeightFull
             // 
-            this.labelAddCapacityFull.AutoSize = true;
-            this.labelAddCapacityFull.Location = new System.Drawing.Point(3, 181);
-            this.labelAddCapacityFull.Name = "labelAddCapacityFull";
-            this.labelAddCapacityFull.Size = new System.Drawing.Size(148, 13);
-            this.labelAddCapacityFull.TabIndex = 7;
-            this.labelAddCapacityFull.Text = "Обьем полной бутылки, мл:";
+            this.textBoxAddWeightFull.Location = new System.Drawing.Point(149, 105);
+            this.textBoxAddWeightFull.Name = "textBoxAddWeightFull";
+            this.textBoxAddWeightFull.Size = new System.Drawing.Size(100, 20);
+            this.textBoxAddWeightFull.TabIndex = 14;
             // 
-            // labelAddCapacityNow
+            // textBoxAddType
             // 
-            this.labelAddCapacityNow.AutoSize = true;
-            this.labelAddCapacityNow.Location = new System.Drawing.Point(4, 208);
-            this.labelAddCapacityNow.Name = "labelAddCapacityNow";
-            this.labelAddCapacityNow.Size = new System.Drawing.Size(110, 13);
-            this.labelAddCapacityNow.TabIndex = 8;
-            this.labelAddCapacityNow.Text = "Текущий обьем, мл:";
+            this.textBoxAddType.Location = new System.Drawing.Point(149, 78);
+            this.textBoxAddType.Name = "textBoxAddType";
+            this.textBoxAddType.Size = new System.Drawing.Size(100, 20);
+            this.textBoxAddType.TabIndex = 13;
+            // 
+            // textBoxAddSerial
+            // 
+            this.textBoxAddSerial.Location = new System.Drawing.Point(149, 53);
+            this.textBoxAddSerial.Name = "textBoxAddSerial";
+            this.textBoxAddSerial.Size = new System.Drawing.Size(100, 20);
+            this.textBoxAddSerial.TabIndex = 12;
+            // 
+            // textBoxAddName
+            // 
+            this.textBoxAddName.Location = new System.Drawing.Point(149, 28);
+            this.textBoxAddName.Name = "textBoxAddName";
+            this.textBoxAddName.Size = new System.Drawing.Size(100, 20);
+            this.textBoxAddName.TabIndex = 11;
+            // 
+            // labelAddPortion
+            // 
+            this.labelAddPortion.AutoSize = true;
+            this.labelAddPortion.Location = new System.Drawing.Point(4, 263);
+            this.labelAddPortion.Name = "labelAddPortion";
+            this.labelAddPortion.Size = new System.Drawing.Size(108, 13);
+            this.labelAddPortion.TabIndex = 10;
+            this.labelAddPortion.Text = "Размер порции, мл:";
             // 
             // labelAddPrice
             // 
@@ -348,93 +350,94 @@
             this.labelAddPrice.TabIndex = 9;
             this.labelAddPrice.Text = "Цена за порцию, руб:";
             // 
-            // labelAddSize
+            // labelAddCapacityNow
             // 
-            this.labelAddSize.AutoSize = true;
-            this.labelAddSize.Location = new System.Drawing.Point(4, 263);
-            this.labelAddSize.Name = "labelAddSize";
-            this.labelAddSize.Size = new System.Drawing.Size(108, 13);
-            this.labelAddSize.TabIndex = 10;
-            this.labelAddSize.Text = "Размер порции, мл:";
+            this.labelAddCapacityNow.AutoSize = true;
+            this.labelAddCapacityNow.Location = new System.Drawing.Point(4, 208);
+            this.labelAddCapacityNow.Name = "labelAddCapacityNow";
+            this.labelAddCapacityNow.Size = new System.Drawing.Size(110, 13);
+            this.labelAddCapacityNow.TabIndex = 8;
+            this.labelAddCapacityNow.Text = "Текущий обьем, мл:";
             // 
-            // textBoxAddName
+            // labelAddCapacityFull
             // 
-            this.textBoxAddName.Location = new System.Drawing.Point(149, 28);
-            this.textBoxAddName.Name = "textBoxAddName";
-            this.textBoxAddName.Size = new System.Drawing.Size(100, 20);
-            this.textBoxAddName.TabIndex = 11;
+            this.labelAddCapacityFull.AutoSize = true;
+            this.labelAddCapacityFull.Location = new System.Drawing.Point(3, 181);
+            this.labelAddCapacityFull.Name = "labelAddCapacityFull";
+            this.labelAddCapacityFull.Size = new System.Drawing.Size(148, 13);
+            this.labelAddCapacityFull.TabIndex = 7;
+            this.labelAddCapacityFull.Text = "Обьем полной бутылки, мл:";
             // 
-            // textBoxAddSerial
+            // labelAddWeightNow
             // 
-            this.textBoxAddSerial.Location = new System.Drawing.Point(149, 53);
-            this.textBoxAddSerial.Name = "textBoxAddSerial";
-            this.textBoxAddSerial.Size = new System.Drawing.Size(100, 20);
-            this.textBoxAddSerial.TabIndex = 12;
+            this.labelAddWeightNow.AutoSize = true;
+            this.labelAddWeightNow.Location = new System.Drawing.Point(3, 156);
+            this.labelAddWeightNow.Name = "labelAddWeightNow";
+            this.labelAddWeightNow.Size = new System.Drawing.Size(95, 13);
+            this.labelAddWeightNow.TabIndex = 6;
+            this.labelAddWeightNow.Text = "Текущий вес, мг:";
             // 
-            // textBoxAddType
+            // labelAddWeightEmpty
             // 
-            this.textBoxAddType.Location = new System.Drawing.Point(149, 78);
-            this.textBoxAddType.Name = "textBoxAddType";
-            this.textBoxAddType.Size = new System.Drawing.Size(100, 20);
-            this.textBoxAddType.TabIndex = 13;
+            this.labelAddWeightEmpty.AutoSize = true;
+            this.labelAddWeightEmpty.Location = new System.Drawing.Point(4, 133);
+            this.labelAddWeightEmpty.Name = "labelAddWeightEmpty";
+            this.labelAddWeightEmpty.Size = new System.Drawing.Size(128, 13);
+            this.labelAddWeightEmpty.TabIndex = 5;
+            this.labelAddWeightEmpty.Text = "Вес пустой бутылки, гр:";
             // 
-            // textBoxAddWeightFull
+            // labelAddWeightFull
             // 
-            this.textBoxAddWeightFull.Location = new System.Drawing.Point(149, 105);
-            this.textBoxAddWeightFull.Name = "textBoxAddWeightFull";
-            this.textBoxAddWeightFull.Size = new System.Drawing.Size(100, 20);
-            this.textBoxAddWeightFull.TabIndex = 14;
+            this.labelAddWeightFull.AutoSize = true;
+            this.labelAddWeightFull.Location = new System.Drawing.Point(4, 108);
+            this.labelAddWeightFull.Name = "labelAddWeightFull";
+            this.labelAddWeightFull.Size = new System.Drawing.Size(130, 13);
+            this.labelAddWeightFull.TabIndex = 4;
+            this.labelAddWeightFull.Text = "Вес полной бутылки, гр:";
             // 
-            // textBoxAddWeightEmpty
+            // labelAddType
             // 
-            this.textBoxAddWeightEmpty.Location = new System.Drawing.Point(149, 130);
-            this.textBoxAddWeightEmpty.Name = "textBoxAddWeightEmpty";
-            this.textBoxAddWeightEmpty.Size = new System.Drawing.Size(100, 20);
-            this.textBoxAddWeightEmpty.TabIndex = 15;
+            this.labelAddType.AutoSize = true;
+            this.labelAddType.Location = new System.Drawing.Point(4, 81);
+            this.labelAddType.Name = "labelAddType";
+            this.labelAddType.Size = new System.Drawing.Size(29, 13);
+            this.labelAddType.TabIndex = 3;
+            this.labelAddType.Text = "Тип:";
             // 
-            // textBoxAddWeightNow
+            // labelAddSerial
             // 
-            this.textBoxAddWeightNow.Location = new System.Drawing.Point(149, 153);
-            this.textBoxAddWeightNow.Name = "textBoxAddWeightNow";
-            this.textBoxAddWeightNow.Size = new System.Drawing.Size(100, 20);
-            this.textBoxAddWeightNow.TabIndex = 16;
+            this.labelAddSerial.AutoSize = true;
+            this.labelAddSerial.Location = new System.Drawing.Point(4, 56);
+            this.labelAddSerial.Name = "labelAddSerial";
+            this.labelAddSerial.Size = new System.Drawing.Size(59, 13);
+            this.labelAddSerial.TabIndex = 2;
+            this.labelAddSerial.Text = "Серийник:";
             // 
-            // textBoxAddCapacityFull
+            // labelAddName
             // 
-            this.textBoxAddCapacityFull.Location = new System.Drawing.Point(149, 178);
-            this.textBoxAddCapacityFull.Name = "textBoxAddCapacityFull";
-            this.textBoxAddCapacityFull.Size = new System.Drawing.Size(100, 20);
-            this.textBoxAddCapacityFull.TabIndex = 17;
+            this.labelAddName.AutoSize = true;
+            this.labelAddName.Location = new System.Drawing.Point(4, 31);
+            this.labelAddName.Name = "labelAddName";
+            this.labelAddName.Size = new System.Drawing.Size(60, 13);
+            this.labelAddName.TabIndex = 1;
+            this.labelAddName.Text = "Название:";
             // 
-            // textBoxAddCapacityNow
+            // labelAddPosition
             // 
-            this.textBoxAddCapacityNow.Location = new System.Drawing.Point(149, 205);
-            this.textBoxAddCapacityNow.Name = "textBoxAddCapacityNow";
-            this.textBoxAddCapacityNow.Size = new System.Drawing.Size(100, 20);
-            this.textBoxAddCapacityNow.TabIndex = 18;
+            this.labelAddPosition.AutoSize = true;
+            this.labelAddPosition.Location = new System.Drawing.Point(4, 4);
+            this.labelAddPosition.Name = "labelAddPosition";
+            this.labelAddPosition.Size = new System.Drawing.Size(155, 13);
+            this.labelAddPosition.TabIndex = 0;
+            this.labelAddPosition.Text = "Добавить позицию на склад:";
             // 
-            // textBoxAddPrice
+            // dataGridViewClassification
             // 
-            this.textBoxAddPrice.Location = new System.Drawing.Point(149, 233);
-            this.textBoxAddPrice.Name = "textBoxAddPrice";
-            this.textBoxAddPrice.Size = new System.Drawing.Size(100, 20);
-            this.textBoxAddPrice.TabIndex = 19;
-            // 
-            // textBoxAddSize
-            // 
-            this.textBoxAddSize.Location = new System.Drawing.Point(149, 260);
-            this.textBoxAddSize.Name = "textBoxAddSize";
-            this.textBoxAddSize.Size = new System.Drawing.Size(100, 20);
-            this.textBoxAddSize.TabIndex = 20;
-            // 
-            // buttonAddPosition
-            // 
-            this.buttonAddPosition.Location = new System.Drawing.Point(149, 287);
-            this.buttonAddPosition.Name = "buttonAddPosition";
-            this.buttonAddPosition.Size = new System.Drawing.Size(100, 38);
-            this.buttonAddPosition.TabIndex = 21;
-            this.buttonAddPosition.Text = "Добавить позицию";
-            this.buttonAddPosition.UseVisualStyleBackColor = true;
+            this.dataGridViewClassification.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewClassification.Location = new System.Drawing.Point(4, 4);
+            this.dataGridViewClassification.Name = "dataGridViewClassification";
+            this.dataGridViewClassification.Size = new System.Drawing.Size(810, 634);
+            this.dataGridViewClassification.TabIndex = 0;
             // 
             // FormMain
             // 
@@ -447,17 +450,18 @@
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bario3";
+            this.Load += new System.EventHandler(this.FormMain_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
             this.panelMain.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabPage2.ResumeLayout(false);
             this.panelScanPosition.ResumeLayout(false);
             this.panelScanPosition.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStorage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabPage3.ResumeLayout(false);
             this.panelAddPosition.ResumeLayout(false);
             this.panelAddPosition.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClassification)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -481,7 +485,7 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Panel panelAddPosition;
         private System.Windows.Forms.Button buttonAddPosition;
-        private System.Windows.Forms.TextBox textBoxAddSize;
+        private System.Windows.Forms.TextBox textBoxAddPortion;
         private System.Windows.Forms.TextBox textBoxAddPrice;
         private System.Windows.Forms.TextBox textBoxAddCapacityNow;
         private System.Windows.Forms.TextBox textBoxAddCapacityFull;
@@ -491,7 +495,7 @@
         private System.Windows.Forms.TextBox textBoxAddType;
         private System.Windows.Forms.TextBox textBoxAddSerial;
         private System.Windows.Forms.TextBox textBoxAddName;
-        private System.Windows.Forms.Label labelAddSize;
+        private System.Windows.Forms.Label labelAddPortion;
         private System.Windows.Forms.Label labelAddPrice;
         private System.Windows.Forms.Label labelAddCapacityNow;
         private System.Windows.Forms.Label labelAddCapacityFull;
@@ -502,7 +506,7 @@
         private System.Windows.Forms.Label labelAddSerial;
         private System.Windows.Forms.Label labelAddName;
         private System.Windows.Forms.Label labelAddPosition;
-        private System.Windows.Forms.DataGridView dataGridViewStorage;
+        private System.Windows.Forms.DataGridView dataGridViewClassification;
     }
 }
 
