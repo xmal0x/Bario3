@@ -38,6 +38,8 @@ namespace bario3
             bottle.price = price;
             bottle.portion = portion;
 
+            bottle.posNum = classificationDB.Count;
+
             classificationDB.Add(classificationDB.Count, bottle);
         }
 
