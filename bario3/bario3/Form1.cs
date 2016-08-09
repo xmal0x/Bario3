@@ -66,5 +66,19 @@ namespace bario3
         {
             mainDBController.SaveAll();
         }
+
+        private void buttonScanPosition_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int weightScan = Int32.Parse(textBoxWeightScan.Text);
+                int serialScan = Int32.Parse(textBoxSerialScan.Text);
+                mainDBController.ScanPosition(weightScan, serialScan);
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Ошибка в сканируемых значениях\n" + ex.Message);
+            }
+
+        }
     }
 }

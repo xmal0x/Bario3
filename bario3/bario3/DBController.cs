@@ -12,6 +12,8 @@ namespace bario3
     class DBController
     {
         public Dictionary<int, Bottle> classificationDB; //Номенклатурный справочник
+        public Dictionary<DateTime, Bottle> inventDB; //бд инвентаризации
+
 
         private string pathClassifDB = @"D:\projects\Bario3new\bario3\bario3\bin\Debug\classDB.txt"; //Путь к бд справочника номенклатуры
         
@@ -19,6 +21,7 @@ namespace bario3
         public void Connect()
         {
             classificationDB = new Dictionary<int, Bottle>();
+            inventDB = new Dictionary<DateTime, Bottle>();
             //Console.WriteLine(classificationDB.Count);
         }
 
@@ -46,7 +49,7 @@ namespace bario3
         public void SaveAll()
         {
             //Сохранить все БД
-
+            //сохранение номенклатуры
             string jsonClassDB = JsonConvert.SerializeObject(classificationDB);
 
             using (StreamWriter sw = new StreamWriter(pathClassifDB))
@@ -58,7 +61,7 @@ namespace bario3
         public void LoadAll()
         {
             //Загрузить Все БД
-
+            //загрузка номенклатуры
             string jsonClassDB = File.ReadAllText(pathClassifDB);
             if (String.IsNullOrEmpty(jsonClassDB)) return;
             classificationDB = JsonConvert.DeserializeObject<Dictionary<int, Bottle>>(jsonClassDB);
@@ -110,6 +113,24 @@ namespace bario3
             }catch(Exception ex)
             { Console.WriteLine(ex.Message); }
 
+        }
+
+        public void ScanPosition(int weightScan, int serialScan)
+        {
+            //сканируем позицию
+            Bottle inventBottle = new Bottle();
+            inventBottle.name = "";
+            foreach(int k in classificationDB.Keys)
+            {
+                if (classificationDB[k].serial == serialScan)
+                {
+                    inventBottle = classificationDB[k];
+                    inventBottle.weightNow = weightScan;
+                    inventBottle.capacityNow = mathBario.Calculate(weightScan); // расчет текущего обьема
+                }
+            }
+            if (inventBottle.name == "")
+                MessageBox.Show("Данной позиции не найдено в номенклатурном справочнике");
         }
     }
 }

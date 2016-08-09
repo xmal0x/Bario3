@@ -162,6 +162,7 @@
             this.buttonScanPosition.TabIndex = 5;
             this.buttonScanPosition.Text = "Сканировать";
             this.buttonScanPosition.UseVisualStyleBackColor = true;
+            this.buttonScanPosition.Click += new System.EventHandler(this.buttonScanPosition_Click);
             // 
             // textBoxWeightScan
             // 
