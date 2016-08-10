@@ -41,7 +41,7 @@
             this.labelWeightScan = new System.Windows.Forms.Label();
             this.labelSerialScan = new System.Windows.Forms.Label();
             this.labelScanposition = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewInvent = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panelAddPosition = new System.Windows.Forms.Panel();
             this.buttonAddPosition = new System.Windows.Forms.Button();
@@ -72,7 +72,7 @@
             this.panelMain.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panelScanPosition.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInvent)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.panelAddPosition.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClassification)).BeginInit();
@@ -132,7 +132,7 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.panelScanPosition);
-            this.tabPage2.Controls.Add(this.dataGridView1);
+            this.tabPage2.Controls.Add(this.dataGridViewInvent);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -205,13 +205,13 @@
             this.labelScanposition.TabIndex = 0;
             this.labelScanposition.Text = "Сканировать позицию:";
             // 
-            // dataGridView1
+            // dataGridViewInvent
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 7);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(830, 628);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridViewInvent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewInvent.Location = new System.Drawing.Point(7, 7);
+            this.dataGridViewInvent.Name = "dataGridViewInvent";
+            this.dataGridViewInvent.Size = new System.Drawing.Size(830, 628);
+            this.dataGridViewInvent.TabIndex = 0;
             // 
             // tabPage3
             // 
@@ -458,7 +458,7 @@
             this.tabPage2.ResumeLayout(false);
             this.panelScanPosition.ResumeLayout(false);
             this.panelScanPosition.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInvent)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.panelAddPosition.ResumeLayout(false);
             this.panelAddPosition.PerformLayout();
@@ -482,7 +482,7 @@
         private System.Windows.Forms.Label labelWeightScan;
         private System.Windows.Forms.Label labelSerialScan;
         private System.Windows.Forms.Label labelScanposition;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewInvent;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Panel panelAddPosition;
         private System.Windows.Forms.Button buttonAddPosition;

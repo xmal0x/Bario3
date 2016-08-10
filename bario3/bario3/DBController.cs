@@ -15,8 +15,9 @@ namespace bario3
         public Dictionary<DateTime, Bottle> inventDB; //бд инвентаризации
 
 
-        private string pathClassifDB = @"D:\projects\Bario3new\bario3\bario3\bin\Debug\classDB.txt"; //Путь к бд справочника номенклатуры
-        
+        private string pathClassifDB = @"classDB.txt"; //Путь к бд справочника номенклатуры
+        private string pathInventDB = @"inventDB.txt"; //Путь к бд инвентаризации
+
 
         public void Connect()
         {
@@ -42,6 +43,14 @@ namespace bario3
             bottle.portion = portion;
 
             bottle.posNum = classificationDB.Count;
+            foreach (int k in classificationDB.Keys)
+            {
+                if (bottle.serial == classificationDB[k].serial)
+                {
+                    MessageBox.Show("Позиция с таким серийным номер уже есть справочнике номенклатуры");
+                    return;
+                }
+            }
 
             classificationDB.Add(classificationDB.Count, bottle);
         }
@@ -56,15 +65,29 @@ namespace bario3
             {
                 sw.Write(jsonClassDB);
             }
+
+            //сохранение инвент
+            string jsonInventDB = JsonConvert.SerializeObject(inventDB);
+
+            using (StreamWriter sw = new StreamWriter(pathInventDB))
+            {
+                sw.Write(jsonInventDB);
+            }
+
         }
 
         public void LoadAll()
         {
             //Загрузить Все БД
-            //загрузка номенклатуры
+            //загрузка номенклатуры BD
             string jsonClassDB = File.ReadAllText(pathClassifDB);
             if (String.IsNullOrEmpty(jsonClassDB)) return;
             classificationDB = JsonConvert.DeserializeObject<Dictionary<int, Bottle>>(jsonClassDB);
+
+            //загрузка инвент BD
+            string jsonInventDB = File.ReadAllText(pathInventDB);
+            if (String.IsNullOrEmpty(jsonInventDB)) return;
+            inventDB = JsonConvert.DeserializeObject<Dictionary<DateTime, Bottle>>(jsonInventDB);
         }
 
         public void ShowClassDB(DataGridView dg, Dictionary<int, Bottle> dict)
@@ -126,11 +149,64 @@ namespace bario3
                 {
                     inventBottle = classificationDB[k];
                     inventBottle.weightNow = weightScan;
-                    inventBottle.capacityNow = mathBario.Calculate(weightScan); // расчет текущего обьема
+                    inventBottle.capacityNow = (int)mathBario.Calculate(inventBottle ,weightScan); // расчет текущего обьема
+                    inventDB.Add(DateTime.Now, inventBottle);
                 }
             }
             if (inventBottle.name == "")
                 MessageBox.Show("Данной позиции не найдено в номенклатурном справочнике");
+        }
+
+        public void ShowInventDB(DataGridView dg, Dictionary<DateTime, Bottle> dict)
+        {
+            try
+            {
+                //Вывести содержимое БД номенклатуры в датагрид
+                dg.Columns.Clear();
+                dg.Rows.Clear();
+
+                dg.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+                dg.Columns.Add("date", "Дата инвентаризации");
+                dg.Columns.Add("posNum", "Номер");
+                dg.Columns.Add("name", "Название");
+                dg.Columns.Add("serial", "Серийник");
+                dg.Columns.Add("type", "Тип");
+
+                dg.Columns.Add("capacityFull", "Полный обьем, мл");
+                dg.Columns.Add("capacityNow", "Текущий обьем, мл");
+                dg.Columns.Add("price", "Цена за порцию, руб");
+                dg.Columns.Add("portion", "Порция, мл");
+                dg.Columns.Add("fullPrice", "Цена за остаток, руб");
+
+                
+                if (dict.Count == 0) return;
+
+                dg.Rows.Add(dict.Count);
+
+                int k = 0; //счетчик для строк
+                foreach (DateTime d in dict.Keys)
+                {
+                    dg.Rows[k].Cells["date"].Value = d.Date;
+                    dg.Rows[k].Cells["posNum"].Value = dict[d].posNum;
+                    dg.Rows[k].Cells["name"].Value = dict[d].name;
+                    dg.Rows[k].Cells["serial"].Value = dict[d].serial;
+                    dg.Rows[k].Cells["type"].Value = dict[d].type;
+
+                    dg.Rows[k].Cells["capacityFull"].Value = dict[d].capacityFull;
+                    dg.Rows[k].Cells["capacityNow"].Value = dict[d].capacityNow;
+                    dg.Rows[k].Cells["price"].Value = dict[d].price;
+                    dg.Rows[k].Cells["portion"].Value = dict[d].portion;
+
+                    dg.Rows[k].Cells["fullPrice"].Value = (int)mathBario.FullPriceCalculate(dict[d]);
+
+
+                    k += 1;
+                }
+            }
+            catch (Exception ex)
+            { Console.WriteLine(ex.Message); }
+
         }
     }
 }
