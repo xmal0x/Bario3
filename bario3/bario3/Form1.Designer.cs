@@ -67,6 +67,21 @@
             this.labelAddName = new System.Windows.Forms.Label();
             this.labelAddPosition = new System.Windows.Forms.Label();
             this.dataGridViewClassification = new System.Windows.Forms.DataGridView();
+            this.panelMoney = new System.Windows.Forms.Panel();
+            this.labelMoney = new System.Windows.Forms.Label();
+            this.dateTimePickerMoney = new System.Windows.Forms.DateTimePicker();
+            this.labelMoneyDate = new System.Windows.Forms.Label();
+            this.labelMoneyGet = new System.Windows.Forms.Label();
+            this.labelMoneyFull = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.labelMoneyDifference = new System.Windows.Forms.Label();
+            this.labelMoneyDiffDay1 = new System.Windows.Forms.Label();
+            this.labelMoneyDiffDay2 = new System.Windows.Forms.Label();
+            this.dateTimePickerMoneyDiffDay1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerMoneyDiffDay2 = new System.Windows.Forms.DateTimePicker();
+            this.buttonMoneyDifference = new System.Windows.Forms.Button();
+            this.labelMoneyDiffd1d2 = new System.Windows.Forms.Label();
+            this.labelMoneyDiff = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panelMain.SuspendLayout();
@@ -76,6 +91,8 @@
             this.tabPage3.SuspendLayout();
             this.panelAddPosition.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClassification)).BeginInit();
+            this.panelMoney.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -91,6 +108,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.panel1);
+            this.tabPage1.Controls.Add(this.panelMoney);
             this.tabPage1.Controls.Add(this.panelMain);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -440,6 +459,146 @@
             this.dataGridViewClassification.Size = new System.Drawing.Size(810, 634);
             this.dataGridViewClassification.TabIndex = 0;
             // 
+            // panelMoney
+            // 
+            this.panelMoney.Controls.Add(this.labelMoneyFull);
+            this.panelMoney.Controls.Add(this.labelMoneyGet);
+            this.panelMoney.Controls.Add(this.labelMoneyDate);
+            this.panelMoney.Controls.Add(this.dateTimePickerMoney);
+            this.panelMoney.Controls.Add(this.labelMoney);
+            this.panelMoney.Location = new System.Drawing.Point(7, 6);
+            this.panelMoney.Name = "panelMoney";
+            this.panelMoney.Size = new System.Drawing.Size(299, 130);
+            this.panelMoney.TabIndex = 1;
+            // 
+            // labelMoney
+            // 
+            this.labelMoney.AutoSize = true;
+            this.labelMoney.Location = new System.Drawing.Point(4, 4);
+            this.labelMoney.Name = "labelMoney";
+            this.labelMoney.Size = new System.Drawing.Size(150, 13);
+            this.labelMoney.TabIndex = 0;
+            this.labelMoney.Text = "Расчет средств по наличию:";
+            // 
+            // dateTimePickerMoney
+            // 
+            this.dateTimePickerMoney.Location = new System.Drawing.Point(7, 49);
+            this.dateTimePickerMoney.Name = "dateTimePickerMoney";
+            this.dateTimePickerMoney.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePickerMoney.TabIndex = 1;
+            this.dateTimePickerMoney.ValueChanged += new System.EventHandler(this.dateTimePickerMoney_ValueChanged);
+            // 
+            // labelMoneyDate
+            // 
+            this.labelMoneyDate.AutoSize = true;
+            this.labelMoneyDate.Location = new System.Drawing.Point(4, 32);
+            this.labelMoneyDate.Name = "labelMoneyDate";
+            this.labelMoneyDate.Size = new System.Drawing.Size(85, 13);
+            this.labelMoneyDate.TabIndex = 2;
+            this.labelMoneyDate.Text = "Выберите дату:";
+            // 
+            // labelMoneyGet
+            // 
+            this.labelMoneyGet.AutoSize = true;
+            this.labelMoneyGet.Location = new System.Drawing.Point(7, 76);
+            this.labelMoneyGet.Name = "labelMoneyGet";
+            this.labelMoneyGet.Size = new System.Drawing.Size(171, 13);
+            this.labelMoneyGet.TabIndex = 3;
+            this.labelMoneyGet.Text = "Стоимость позиций составляет:";
+            // 
+            // labelMoneyFull
+            // 
+            this.labelMoneyFull.AutoSize = true;
+            this.labelMoneyFull.Location = new System.Drawing.Point(184, 76);
+            this.labelMoneyFull.Name = "labelMoneyFull";
+            this.labelMoneyFull.Size = new System.Drawing.Size(13, 13);
+            this.labelMoneyFull.TabIndex = 4;
+            this.labelMoneyFull.Text = "0";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.labelMoneyDiff);
+            this.panel1.Controls.Add(this.labelMoneyDiffd1d2);
+            this.panel1.Controls.Add(this.buttonMoneyDifference);
+            this.panel1.Controls.Add(this.dateTimePickerMoneyDiffDay2);
+            this.panel1.Controls.Add(this.dateTimePickerMoneyDiffDay1);
+            this.panel1.Controls.Add(this.labelMoneyDiffDay2);
+            this.panel1.Controls.Add(this.labelMoneyDiffDay1);
+            this.panel1.Controls.Add(this.labelMoneyDifference);
+            this.panel1.Location = new System.Drawing.Point(7, 143);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(299, 191);
+            this.panel1.TabIndex = 2;
+            // 
+            // labelMoneyDifference
+            // 
+            this.labelMoneyDifference.AutoSize = true;
+            this.labelMoneyDifference.Location = new System.Drawing.Point(4, 10);
+            this.labelMoneyDifference.Name = "labelMoneyDifference";
+            this.labelMoneyDifference.Size = new System.Drawing.Size(153, 13);
+            this.labelMoneyDifference.TabIndex = 0;
+            this.labelMoneyDifference.Text = "Расчет разницы по наличию:";
+            // 
+            // labelMoneyDiffDay1
+            // 
+            this.labelMoneyDiffDay1.AutoSize = true;
+            this.labelMoneyDiffDay1.Location = new System.Drawing.Point(4, 39);
+            this.labelMoneyDiffDay1.Name = "labelMoneyDiffDay1";
+            this.labelMoneyDiffDay1.Size = new System.Drawing.Size(143, 13);
+            this.labelMoneyDiffDay1.TabIndex = 1;
+            this.labelMoneyDiffDay1.Text = "Выберите 1 день(сегодня):";
+            // 
+            // labelMoneyDiffDay2
+            // 
+            this.labelMoneyDiffDay2.AutoSize = true;
+            this.labelMoneyDiffDay2.Location = new System.Drawing.Point(4, 88);
+            this.labelMoneyDiffDay2.Name = "labelMoneyDiffDay2";
+            this.labelMoneyDiffDay2.Size = new System.Drawing.Size(96, 13);
+            this.labelMoneyDiffDay2.TabIndex = 2;
+            this.labelMoneyDiffDay2.Text = "Выберите 2 день:";
+            // 
+            // dateTimePickerMoneyDiffDay1
+            // 
+            this.dateTimePickerMoneyDiffDay1.Location = new System.Drawing.Point(7, 55);
+            this.dateTimePickerMoneyDiffDay1.Name = "dateTimePickerMoneyDiffDay1";
+            this.dateTimePickerMoneyDiffDay1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePickerMoneyDiffDay1.TabIndex = 3;
+            // 
+            // dateTimePickerMoneyDiffDay2
+            // 
+            this.dateTimePickerMoneyDiffDay2.Location = new System.Drawing.Point(7, 104);
+            this.dateTimePickerMoneyDiffDay2.Name = "dateTimePickerMoneyDiffDay2";
+            this.dateTimePickerMoneyDiffDay2.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePickerMoneyDiffDay2.TabIndex = 4;
+            // 
+            // buttonMoneyDifference
+            // 
+            this.buttonMoneyDifference.Location = new System.Drawing.Point(73, 159);
+            this.buttonMoneyDifference.Name = "buttonMoneyDifference";
+            this.buttonMoneyDifference.Size = new System.Drawing.Size(134, 23);
+            this.buttonMoneyDifference.TabIndex = 5;
+            this.buttonMoneyDifference.Text = "Расчитать разницу";
+            this.buttonMoneyDifference.UseVisualStyleBackColor = true;
+            this.buttonMoneyDifference.Click += new System.EventHandler(this.buttonMoneyDifference_Click);
+            // 
+            // labelMoneyDiffd1d2
+            // 
+            this.labelMoneyDiffd1d2.AutoSize = true;
+            this.labelMoneyDiffd1d2.Location = new System.Drawing.Point(7, 131);
+            this.labelMoneyDiffd1d2.Name = "labelMoneyDiffd1d2";
+            this.labelMoneyDiffd1d2.Size = new System.Drawing.Size(207, 13);
+            this.labelMoneyDiffd1d2.TabIndex = 6;
+            this.labelMoneyDiffd1d2.Text = "Разница между 1 днем и 2м(выручка?):";
+            // 
+            // labelMoneyDiff
+            // 
+            this.labelMoneyDiff.AutoSize = true;
+            this.labelMoneyDiff.Location = new System.Drawing.Point(220, 131);
+            this.labelMoneyDiff.Name = "labelMoneyDiff";
+            this.labelMoneyDiff.Size = new System.Drawing.Size(13, 13);
+            this.labelMoneyDiff.TabIndex = 7;
+            this.labelMoneyDiff.Text = "0";
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -463,6 +622,10 @@
             this.panelAddPosition.ResumeLayout(false);
             this.panelAddPosition.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClassification)).EndInit();
+            this.panelMoney.ResumeLayout(false);
+            this.panelMoney.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -508,6 +671,21 @@
         private System.Windows.Forms.Label labelAddName;
         private System.Windows.Forms.Label labelAddPosition;
         private System.Windows.Forms.DataGridView dataGridViewClassification;
+        private System.Windows.Forms.Panel panelMoney;
+        private System.Windows.Forms.Label labelMoneyFull;
+        private System.Windows.Forms.Label labelMoneyGet;
+        private System.Windows.Forms.Label labelMoneyDate;
+        private System.Windows.Forms.DateTimePicker dateTimePickerMoney;
+        private System.Windows.Forms.Label labelMoney;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label labelMoneyDiff;
+        private System.Windows.Forms.Label labelMoneyDiffd1d2;
+        private System.Windows.Forms.Button buttonMoneyDifference;
+        private System.Windows.Forms.DateTimePicker dateTimePickerMoneyDiffDay2;
+        private System.Windows.Forms.DateTimePicker dateTimePickerMoneyDiffDay1;
+        private System.Windows.Forms.Label labelMoneyDiffDay2;
+        private System.Windows.Forms.Label labelMoneyDiffDay1;
+        private System.Windows.Forms.Label labelMoneyDifference;
     }
 }
 

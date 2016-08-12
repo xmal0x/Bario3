@@ -150,6 +150,7 @@ namespace bario3
                     inventBottle = classificationDB[k];
                     inventBottle.weightNow = weightScan;
                     inventBottle.capacityNow = (int)mathBario.Calculate(inventBottle ,weightScan); // расчет текущего обьема
+                    inventBottle.posNum = inventDB.Count;
                     inventDB.Add(DateTime.Now, inventBottle);
                 }
             }

@@ -82,5 +82,26 @@ namespace bario3
             }
 
         }
+
+        private void dateTimePickerMoney_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime date = dateTimePickerMoney.Value;
+
+            labelMoneyFull.Text = mathBario.CalculateMoneyForDay(date, mainDBController.inventDB).ToString();
+        }
+
+        private void buttonMoneyDifference_Click(object sender, EventArgs e)
+        {
+            int gain = 0; // выручка
+
+            DateTime day1 = dateTimePickerMoneyDiffDay1.Value;
+            DateTime day2 = dateTimePickerMoneyDiffDay2.Value;
+
+            //считаем как Стоимость позиций в 2й день - стоимость позиций в день 1 получаем теоретическую выручку
+            gain = mathBario.CalculateMoneyForDay(day2, mainDBController.inventDB) - mathBario.CalculateMoneyForDay(day1, mainDBController.inventDB);
+
+            labelMoneyDiff.Text = gain.ToString(); 
+
+        }
     }
 }
