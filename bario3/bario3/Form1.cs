@@ -27,6 +27,10 @@ namespace bario3
             mainDBController.LoadAll();
             mainDBController.ShowClassDB(dataGridViewClassification, mainDBController.classificationDB);
             mainDBController.ShowInventDB(dataGridViewInvent, mainDBController.inventDB);
+
+            //инициализация автокомплитов для name and type
+            HelpController.IniAuto(mainDBController.classificationDB, textBoxAddName, "name");
+            HelpController.IniAuto(mainDBController.classificationDB, textBoxAddType, "type");
         }
 
         private void FormMain_Load(object sender, EventArgs e)
